@@ -4,161 +4,631 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kevin Yip — AI Program Management | APAC Enterprise Transformation</title>
-<meta name="description" content="Senior IT Project Manager specialising in AI Program Management in Hong Kong. PMI-CPMAI | Google Cloud ADP | PMP | 20+ Years APAC Delivery.">
+<meta name="description" content="Senior IT Project Manager pivoting into AI PM roles in Hong Kong. PMI-CPMAI | Google Cloud ADP | PMP | 20+ Years APAC Delivery.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  --w0:#080e18;--w1:#0c1a2e;--w2:#112340;--w3:#1a3354;--w4:#264a6e;
-  --w-rule:#1c2f45;--w-teal:#0d3548;
-  --m-white:#f8f9fb;--m-ice:#f0f4f8;--m-silver:#ccd4de;
-  --m-plat:#9aaabb;--m-steel:#4a5c6e;
-  --ink:#111820;--ink-mid:#243040;--ink-soft:#3d5060;
-  --fire:#b03025;--fire-h:#96271e;
-  --tag-bg:#e4eaf2;--tag-tx:#334d62;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'IBM Plex Sans',sans-serif;background:var(--m-white);color:var(--ink);font-size:17px;line-height:1.78;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-.j{text-align:justify;hyphens:auto;-webkit-hyphens:auto;word-break:break-word;}
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-track{background:var(--w0);}
-::-webkit-scrollbar-thumb{background:var(--w3);}
+  :root {
+    /* Foundation */
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --warm: #f0ebe0;
+    --mid: #6b6456;
+    --rule: #d8d1c4;
+    --tag-bg: #e8e2d8;
+    --tag-text: #5a5248;
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(8,14,24,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--w-rule);height:56px;display:flex;align-items:center;padding:0 3rem;justify-content:space-between;}
-.nav-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:1.1rem;color:var(--m-silver);letter-spacing:0.02em;}
-.nav-links{display:flex;gap:2.2rem;list-style:none;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--m-plat);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover{color:var(--m-white);}
+    /* Hero / dark sections */
+    --hero-bg: #141210;
+    --hero-rule: #3a3530;
 
-/* HERO */
-#hero{min-height:100vh;background:var(--w1);background-image:radial-gradient(ellipse 100% 70% at 60% 30%,var(--w2) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 10% 90%,var(--w-teal) 0%,transparent 55%),linear-gradient(180deg,var(--w0) 0%,var(--w1) 100%);display:flex;align-items:center;padding:7.5rem 3rem 6rem;position:relative;overflow:hidden;}
-#hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(38,74,110,0.18) 1px,transparent 1px),linear-gradient(90deg,rgba(38,74,110,0.18) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 20%,transparent 100%);pointer-events:none;}
-#hero::after{content:'';position:absolute;left:3rem;top:7.5rem;bottom:6rem;width:1px;background:linear-gradient(to bottom,transparent 0%,var(--w3) 15%,var(--w3) 85%,transparent 100%);pointer-events:none;}
-.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;padding-left:3rem;}
+    /* Water (水) — 食神壬水 — structural, intellectual identity */
+    --water: #1a5278;
+    --water-deep: #1a5278;
 
-.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--m-plat);margin-bottom:2.2rem;display:flex;align-items:center;gap:1rem;}
-.eyebrow-fire{width:6px;height:6px;background:var(--fire);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px rgba(176,48,37,0.5);}
-.hero-name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(4rem,9vw,7rem);line-height:0.95;letter-spacing:-0.025em;color:var(--m-white);margin-bottom:0.4rem;}
-.hero-name em{font-style:italic;color:var(--m-silver);}
-.hero-role{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1rem,2vw,1.3rem);color:var(--m-plat);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2.8rem;}
-.hero-creds{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:3.2rem;}
-.cred{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.07em;padding:0.28rem 0.85rem;border:1px solid var(--w3);color:var(--m-plat);background:rgba(26,51,84,0.35);}
-.hero-rule{width:48px;height:1px;background:var(--w4);margin-bottom:1.8rem;}
-.hero-hook{font-size:1.12rem;font-weight:300;line-height:1.82;color:#7a9cb8;max-width:640px;margin-bottom:3.2rem;}
-.hero-hook strong{color:var(--m-white);font-weight:500;}
-.hero-cta{display:inline-flex;align-items:center;gap:0.8rem;background:var(--fire);color:#fff;text-decoration:none;padding:0.9rem 2.2rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.2s,transform 0.15s;}
-.hero-cta:hover{background:var(--fire-h);transform:translateY(-2px);}
-.cta-arr{transition:transform 0.2s;display:inline-block;}
-.hero-cta:hover .cta-arr{transform:translateX(4px);}
+    /* Earth/Metal (土/金) — 印星 — credentials, outcomes, action */
+    --earth: #8B6420;
+    --earth-light: #C4973A;
+  }
 
-/* SECTIONS */
-.section{padding:7rem 3rem;}
-.section--alt{background:var(--m-ice);}
-.section--dark{background:var(--w1);background-image:linear-gradient(150deg,var(--w2) 0%,var(--w0) 70%);border-top:1px solid var(--w-rule);}
-.wrap{max-width:900px;margin:0 auto;}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
-.s-label{display:flex;align-items:center;gap:0.9rem;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--m-plat);margin-bottom:0.7rem;}
-.s-label-line{display:block;width:36px;height:1px;background:var(--m-silver);flex-shrink:0;}
-.section--dark .s-label-line{background:var(--w3);}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.78;
+    -webkit-font-smoothing: antialiased;
+  }
 
-h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.2rem);letter-spacing:-0.025em;line-height:1.12;color:var(--ink);margin-bottom:2.2rem;}
-.section--dark h2{color:var(--m-white);}
-h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.45rem;color:var(--ink);line-height:1.3;margin-bottom:0.5rem;}
-p{margin-bottom:1.15rem;color:var(--m-steel);font-weight:300;}
-p:last-child{margin-bottom:0;}
-p strong{color:var(--ink-mid);font-weight:600;}
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(20,18,16,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--hero-rule);
+    padding: 0 2rem;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-/* CASE STUDIES */
-.cs-wrap{position:relative;}
-.cs-watermark{position:absolute;top:-1.5rem;right:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:clamp(7rem,16vw,13rem);line-height:1;color:var(--m-silver);opacity:0.22;letter-spacing:-0.04em;pointer-events:none;user-select:none;}
-.cs-meta{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:2.4rem;}
-.cs-tag{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.07em;padding:0.2rem 0.7rem;background:var(--tag-bg);color:var(--tag-tx);}
-.cs-block{padding:1.6rem 1.6rem 1.6rem 2rem;border-left:2px solid var(--m-silver);margin-bottom:1.8rem;}
-.cs-block--outcome{border-left-color:var(--w3);background:rgba(17,35,64,0.04);}
-.section--alt .cs-block--outcome{background:rgba(17,35,64,0.06);}
-.cs-block-label{font-family:'JetBrains Mono',monospace;font-size:0.57rem;letter-spacing:0.17em;text-transform:uppercase;color:var(--m-plat);margin-bottom:0.65rem;}
-.cs-list{list-style:none;display:flex;flex-direction:column;gap:0.75rem;}
-.cs-list li{display:flex;gap:0.9rem;align-items:flex-start;font-size:0.92rem;font-weight:300;color:var(--m-steel);line-height:1.7;text-align:justify;hyphens:auto;}
-.cs-list li::before{content:'—';color:var(--m-plat);flex-shrink:0;padding-top:0.02em;}
-.cs-divider{height:1px;background:var(--m-silver);opacity:0.45;margin:5rem 0;}
+  .nav-name {
+    font-family: 'DM Serif Display', serif;
+    color: #f0ebe0;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+  }
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:4rem;margin-top:1rem;}
-.cert-list{list-style:none;display:flex;flex-direction:column;gap:1.1rem;margin-top:0.8rem;}
-.cert-list li{display:flex;gap:0.9rem;align-items:flex-start;font-size:0.88rem;font-weight:300;color:var(--m-steel);line-height:1.6;text-align:justify;hyphens:auto;}
-.cert-badge{flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.07em;background:var(--w2);color:var(--m-silver);padding:0.22rem 0.52rem;margin-top:3px;}
-.skill-cloud{display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:0.8rem;}
-.skill-tag{font-size:0.75rem;font-weight:400;background:var(--tag-bg);color:var(--tag-tx);padding:0.28rem 0.7rem;}
+  .nav-links {
+    display: flex;
+    gap: 1.6rem;
+    list-style: none;
+  }
 
-/* TOOLS */
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:var(--m-silver);border:1px solid var(--m-silver);margin-top:2.2rem;}
-.tool-card{background:var(--m-white);padding:1.6rem;}
-.section--alt .tool-card{background:var(--m-ice);}
-.tool-card-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--m-plat);margin-bottom:0.9rem;padding-bottom:0.65rem;border-bottom:1px solid var(--m-silver);}
-.tool-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
-.tool-list li{font-size:0.84rem;font-weight:300;color:var(--m-steel);line-height:1.45;}
-.tool-list li span{display:block;font-weight:600;color:var(--ink-mid);font-size:0.86rem;}
-.tool-list li em{font-style:normal;font-size:0.76rem;color:var(--m-plat);}
+  .nav-links a {
+    color: #a09890;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    padding: 0.5rem 0;
+    display: inline-block;
+    min-height: 48px;
+    line-height: 48px;
+  }
 
-/* REFLECTIONS */
-.ref-list{border-top:1px solid var(--m-silver);margin-top:1.5rem;}
-.ref-item{display:grid;grid-template-columns:4rem 1fr;gap:2rem;padding:2.4rem 0;border-bottom:1px solid var(--m-silver);align-items:flex-start;}
-.ref-num{font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:2.5rem;line-height:1;color:var(--m-silver);text-align:right;padding-top:0.15rem;}
-.ref-item h3{font-family:'IBM Plex Sans',sans-serif;font-size:0.96rem;font-weight:600;color:var(--ink);margin-bottom:0.55rem;line-height:1.45;}
-.ref-item p{font-size:0.9rem;line-height:1.75;}
+  .nav-links a:hover { color: #f0ebe0; }
 
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem 4rem;margin-top:3rem;padding-top:3rem;border-top:1px solid var(--w-rule);}
-.contact-label{font-family:'JetBrains Mono',monospace;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--m-plat);margin-bottom:0.35rem;}
-.contact-val{font-size:0.92rem;font-weight:300;color:#7a9cb8;}
-.contact-val a{color:#7a9cb8;text-decoration:none;transition:color 0.2s;}
-.contact-val a:hover{color:var(--m-white);}
-.contact-sig{margin-top:4rem;padding-top:2.5rem;border-top:1px solid var(--w-rule);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;}
-.sig-name{font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:2rem;color:var(--m-silver);line-height:1.1;}
-.sig-creds{font-family:'JetBrains Mono',monospace;font-size:0.57rem;color:var(--m-plat);letter-spacing:0.08em;line-height:2;text-align:right;}
+  /* ─── HERO ─── */
+  #hero {
+    background: var(--hero-bg);
+    color: #f0ebe0;
+    padding: 6rem 2rem 5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
 
-/* FOOTER */
-footer{background:#050810;color:#283040;padding:1.5rem 3rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;}
+  /* Dual glow: gold top-right (土), navy bottom-left (水) */
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(139,100,32,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
 
-/* ANIMATIONS */
-@keyframes riseIn{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
-.hero-inner>*{opacity:0;animation:riseIn 0.85s cubic-bezier(0.22,1,0.36,1) forwards;}
-.hero-eyebrow{animation-delay:0.10s;}
-.hero-name{animation-delay:0.28s;}
-.hero-role{animation-delay:0.42s;}
-.hero-creds{animation-delay:0.54s;}
-.hero-rule{animation-delay:0.64s;}
-.hero-hook{animation-delay:0.70s;}
-.hero-cta{animation-delay:0.86s;}
+  #hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(26,58,92,0.14) 0%, transparent 70%);
+    pointer-events: none;
+  }
 
-/* RESPONSIVE */
-@media(max-width:720px){
-  nav{padding:0 1.4rem;}
-  .nav-links{display:none;}
-  #hero{padding:5.5rem 1.4rem 4.5rem;}
-  #hero::after{left:1.4rem;top:5.5rem;}
-  .hero-inner{padding-left:1.4rem;}
-  .section{padding:4.5rem 1.4rem;}
-  .about-grid{grid-template-columns:1fr;gap:2.8rem;}
-  .contact-grid{grid-template-columns:1fr;gap:1.8rem;}
-  .tools-grid{grid-template-columns:1fr 1fr;}
-  .ref-item{grid-template-columns:3rem 1fr;gap:1.2rem;}
-  .contact-sig{flex-direction:column;align-items:flex-start;}
-  .sig-creds{text-align:left;}
-  .cs-watermark{font-size:clamp(5rem,18vw,8rem);opacity:0.15;}
-}
-@media(max-width:460px){.tools-grid{grid-template-columns:1fr;}}
+  .hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Gold eyebrow — 土印星, first recruiter impression */
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--earth-light);
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--earth-light);
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 7vw, 5.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+    color: #f5f2ec;
+  }
+
+  .hero-title-sub {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: #b8a888;
+    font-style: italic;
+    margin-bottom: 2.4rem;
+  }
+
+  .hero-creds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .cred-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #5a5040;
+    border-radius: 2px;
+    color: #c8b890;
+  }
+
+  /* Hero hook — navy border-left = 水食神, intellectual delivery */
+  .hero-hook {
+    font-size: 1.18rem;
+    line-height: 1.78;
+    color: #d4ccc0;
+    max-width: 600px;
+    margin-bottom: 2.8rem;
+    border-left: 2px solid var(--water);
+    padding-left: 1.4rem;
+    text-align: left;
+  }
+
+  .hero-hook strong {
+    color: #f0ebe0;
+    font-weight: 500;
+  }
+
+  /* Bronze CTA — 土印星, attracts 贵人, action */
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--earth);
+    color: #f5f2ec;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+    min-height: 48px;
+  }
+
+  .hero-cta:hover { background: var(--earth-light); transform: translateY(-1px); }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 5rem 2rem; }
+  section:nth-child(even) { background: var(--warm); }
+
+  .section-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* Navy section labels = 水食神, professional output identity */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--water-deep);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+    max-width: 60px;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 1.8rem;
+  }
+
+  h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  p { margin-bottom: 1.1rem; color: #3a3530; text-align: left; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ─── ABOUT ─── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 1.5rem;
+  }
+
+  .certs-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .certs-list li {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #3a3530;
+  }
+
+  /* Bronze badges = 印星, institutional backing */
+  .cert-badge {
+    flex-shrink: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    background: var(--earth);
+    color: white;
+    padding: 0.25rem 0.55rem;
+    border-radius: 2px;
+    margin-top: 3px;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .skill-tag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+  }
+
+  /* ─── CASE STUDIES ─── */
+  .cs-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .cs-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    padding: 0.28rem 0.65rem;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border-radius: 2px;
+  }
+
+  .cs-block {
+    border-left: 3px solid var(--rule);
+    padding-left: 1.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  /* Navy cs-block labels = 水, your delivery voice */
+  .cs-block-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--water-deep);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Bronze highlight block = 土, harvest / outcome / achievement */
+  .cs-block.highlight {
+    border-left-color: var(--earth);
+    background: rgba(139,100,32,0.06);
+    padding: 1rem 1.4rem;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .cs-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+  }
+
+  .cs-list li {
+    font-size: 1rem;
+    color: #3a3530;
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cs-list li::before {
+    content: '—';
+    color: var(--water-deep);
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+
+  /* ─── TOOLS ─── */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .tool-card {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.4rem;
+  }
+
+  /* Navy tool card labels = 水, professional capabilities */
+  .tool-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--water-deep);
+    margin-bottom: 0.8rem;
+  }
+
+  .tool-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .tool-list li {
+    font-size: 0.88rem;
+    color: #3a3530;
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  .tool-list li span { font-weight: 600; color: var(--ink); }
+  .tool-list li em { font-style: normal; font-size: 0.8rem; color: var(--mid); }
+
+  /* ─── REFLECTIONS ─── */
+  .reflection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .reflection-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.4rem;
+    align-items: flex-start;
+  }
+
+  .reflection-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--rule);
+    padding-top: 0.1rem;
+    min-width: 2rem;
+    text-align: right;
+  }
+
+  .reflection-item h3 {
+    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .reflection-item p { font-size: 1rem; margin-bottom: 0; }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: var(--hero-bg);
+    color: #f0ebe0;
+  }
+
+  /* Gold contact section label = 土 on dark, invite 贵人 */
+  #contact .section-label {
+    color: var(--earth-light);
+  }
+
+  #contact .section-label::after { background: var(--hero-rule); }
+  #contact h2 { color: #f5f2ec; }
+  #contact p { color: #c8c0b4; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  /* Gold contact item labels = 土 on dark */
+  .contact-item-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--earth-light);
+  }
+
+  .contact-item a,
+  .contact-item span {
+    font-size: 1rem;
+    color: #c8c0b4;
+    text-decoration: none;
+    transition: color 0.2s;
+    /* Mobile tap target */
+    display: inline-block;
+    padding: 0.3rem 0;
+    min-height: 44px;
+    line-height: 1.6;
+  }
+
+  .contact-item a:hover { color: #f0ebe0; }
+
+  .contact-note {
+    margin-top: 2rem;
+    padding: 1.4rem;
+    border: 1px solid var(--hero-rule);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #a09080;
+    line-height: 1.78;
+    text-align: left;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #0a0908;
+    color: #5a5248;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.06em;
+    border-top: 1px solid var(--hero-rule);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-inner > * {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .hero-eyebrow    { animation-delay: 0.10s; }
+  h1               { animation-delay: 0.25s; }
+  .hero-title-sub  { animation-delay: 0.35s; }
+  .hero-creds      { animation-delay: 0.45s; }
+  .hero-hook       { animation-delay: 0.55s; }
+  .hero-cta        { animation-delay: 0.68s; }
+
+  /* ─── RESPONSIVE / MOBILE ─── */
+  @media (max-width: 680px) {
+    body { font-size: 16px; }
+
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+
+    #hero { padding: 5rem 1.2rem 4rem; }
+    section { padding: 3.5rem 1.2rem; }
+    #contact { padding: 3.5rem 1.2rem; }
+
+    h1 { letter-spacing: -0.01em; }
+
+    .hero-hook {
+      font-size: 1.08rem;
+      line-height: 1.82;
+    }
+
+    /* Minimum 48px tap height on CTA */
+    .hero-cta {
+      font-size: 1rem;
+      padding: 1rem 1.6rem;
+      min-height: 48px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* All mono labels — minimum 0.75rem on mobile */
+    .section-label     { font-size: 0.75rem; }
+    .cs-block-label    { font-size: 0.75rem; }
+    .tool-card-label   { font-size: 0.75rem; }
+    .contact-item-label{ font-size: 0.75rem; }
+    .cred-pill         { font-size: 0.72rem; }
+    .cs-tag            { font-size: 0.72rem; }
+    .cert-badge        { font-size: 0.65rem; }
+    .skill-tag         { font-size: 0.8rem; }
+
+    /* Contact links — generous tap targets on mobile */
+    .contact-item a,
+    .contact-item span {
+      font-size: 1rem;
+      min-height: 48px;
+      padding: 0.4rem 0;
+    }
+
+    /* Layout adjustments */
+    .about-grid      { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-grid    { grid-template-columns: 1fr; gap: 1.6rem; }
+    .tools-grid      { grid-template-columns: 1fr; }
+
+    .reflection-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .reflection-num  { font-size: 1.8rem; text-align: left; }
+
+    /* Tighten case study blocks on small screens */
+    .cs-block { padding-left: 1rem; }
+    .cs-block.highlight { padding: 0.9rem 1rem; }
+  }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <span class="nav-name">Kevin Yip</span>
   <ul class="nav-links">
-    <li><a href="#casestudies">Case Studies</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#cs1">Case Studies</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#reflections">Reflections</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -168,272 +638,287 @@ footer{background:#050810;color:#283040;padding:1.5rem 3rem;text-align:center;fo
 <!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span class="eyebrow-fire"></span>
-      AI Program Management &nbsp;·&nbsp; APAC Enterprise Transformation &nbsp;·&nbsp; Hong Kong
-    </div>
-    <h1 class="hero-name">Kevin <em>Yip</em></h1>
-    <p class="hero-role">Senior IT Project Manager</p>
+    <div class="hero-eyebrow">AI Program Management · APAC Enterprise Transformation</div>
+    <h1>Kevin Yip</h1>
+    <p class="hero-title-sub">Senior IT Project Manager · Hong Kong</p>
     <div class="hero-creds">
-      <span class="cred">PMI-CPMAI</span>
-      <span class="cred">Google Cloud ADP</span>
-      <span class="cred">PMP · PMI-ACP · PSM I · PSPO I</span>
-      <span class="cred">20+ Years APAC Delivery</span>
-      <span class="cred">EN · 廣東話 · 普通話</span>
+      <span class="cred-pill">PMI-CPMAI</span>
+      <span class="cred-pill">Google Cloud ADP</span>
+      <span class="cred-pill">PMP · PMI-ACP · PSM I · PSPO I</span>
+      <span class="cred-pill">20+ Years APAC Delivery</span>
+      <span class="cred-pill">EN · 廣東話 · 普通話</span>
     </div>
-    <div class="hero-rule"></div>
     <p class="hero-hook">
-      I turn complex enterprise AI programs into working systems —
-      and <strong>rescue the ones that stall.</strong><br><br>
-      Twenty years in APAC technology delivery teaches one thing above all else:
-      the difference between a program that ships and one that quietly dies
-      is rarely the technology. It is the governance, the accountability structures,
-      and the people who hold both together under pressure.
+      I turn complex enterprise AI programs into working systems — and <strong>rescue the ones that stall.</strong><br><br>
+      Twenty years in APAC technology delivery teaches one thing above all else: the difference between a program that ships and one that quietly dies is rarely the technology. It's the governance, the accountability structures, and the people who hold both together under pressure.
     </p>
-    <a href="#contact" class="hero-cta">Start a conversation &nbsp;<span class="cta-arr">→</span></a>
+    <a href="#contact" class="hero-cta">Start a conversation →</a>
   </div>
 </section>
 
-<!-- CASE STUDIES -->
-<section id="casestudies" class="section">
-  <div class="wrap">
+<!-- CASE STUDY 1 -->
+<section id="cs1">
+  <div class="section-inner">
+    <div class="section-label">Case Study 01 · Supply Chain AI</div>
+    <h2>Kinaxis Maestro AI Supply Chain Pilot</h2>
 
-    <!-- CS 01 -->
-    <div class="cs-wrap">
-      <div class="cs-watermark">01</div>
-      <div class="s-label"><span class="s-label-line"></span>Case Study 01 &nbsp;·&nbsp; Supply Chain AI</div>
-      <h2>Kinaxis Maestro AI<br>Supply Chain Pilot</h2>
-      <div class="cs-meta">
-        <span class="cs-tag">Carlsberg APAC</span>
-        <span class="cs-tag">FMCG / Beverages</span>
-        <span class="cs-tag">Kinaxis Maestro AI</span>
-        <span class="cs-tag">Malaysia → China</span>
-        <span class="cs-tag">Apr 2022 – Sep 2023</span>
-        <span class="cs-tag">Regional Deployment Lead, Asia</span>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">The Problem</div>
-        <p class="j">Carlsberg operates in 150 markets — each with its own ERP configuration, data structures, and supply chain planning workflows. Deploying Kinaxis Maestro AI, which demands clean, consistent, integrated data, turned that fragmentation into a critical delivery risk. Malaysia was selected as the APAC pilot: high motivation, real stakes, global visibility, with China already positioned as the next market. Not a sandbox exercise — a live production deployment, with the expectation that the model would scale.</p>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">What I Did</div>
-        <p class="j">I came in focused on the data first — not the technology. Every source system feeding Kinaxis needed validation, gap identification, and remediation sequencing. By go-live, the team was closing known issues, not discovering new ones. The go-live itself ran as a <strong>structured command center operation</strong>: real-time issue triage, defined escalation paths, and cross-functional coordination across global leadership, regional IT, supply chain operations, and the Kinaxis vendor — in English, Cantonese, and Mandarin as the conversation required.</p>
-        <p class="j">In parallel, I coordinated a significant China data sovereignty risk: food-related data classified as sensitive under PRC law, with AI servers sitting outside China's borders. I worked between Kinaxis and Carlsberg's security team to give Deloitte the technical clarity needed for a legal recommendation. China subsequently went live on Kinaxis — confirming the path was viable.</p>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">What Made It Hard</div>
-        <ul class="cs-list">
-          <li>Multiple ERP and planning systems, each requiring individual data validation — managed through a shared tracker replacing informal status with structured milestone accountability.</li>
-          <li>Fixed APAC go-live sequenced within a global rollout. Front-loading risk identification meant when the timeline compressed, we were finishing work, not starting it.</li>
-          <li>Three organisations, multiple time zones, different priorities — Carlsberg global, Malaysian regional ops, and the Kinaxis vendor aligned through a single source of truth for status, decisions, and escalations.</li>
-        </ul>
-      </div>
-      <div class="cs-block cs-block--outcome">
-        <div class="cs-block-label">Outcome</div>
-        <p class="j">Malaysia went live on schedule — a <strong>production-ready AI supply chain planning environment</strong> integrated into Carlsberg's regional operations. The delivery directly accelerated China's positioning as the next global rollout market. China subsequently went live, confirming both the coordination model and the data sovereignty path were replicable across markets.</p>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">Key Learning</div>
-        <p class="j">When the pilot market team can only answer for the pilot market, questions with global template implications must go back to global. If that boundary is not held, pilot preferences quietly become global design decisions — and the next market carries the blame for choices that were never theirs to make. Structured meetings, derived decisions, email accountability trails: light enough not to slow the program, firm enough to hold the line.</p>
-      </div>
+    <div class="cs-meta">
+      <span class="cs-tag">FMCG / Beverages</span>
+      <span class="cs-tag">Kinaxis Maestro AI</span>
+      <span class="cs-tag">Malaysia → China (APAC Lead)</span>
+      <span class="cs-tag">Apr 2022 – Sep 2023</span>
+      <span class="cs-tag">Carlsberg APAC</span>
     </div>
 
-    <div class="cs-divider"></div>
-
-    <!-- CS 02 -->
-    <div class="cs-wrap">
-      <div class="cs-watermark">02</div>
-      <div class="s-label"><span class="s-label-line"></span>Case Study 02 &nbsp;·&nbsp; Cloud AI Infrastructure</div>
-      <h2>GCP AI Health Analytics<br>Foundation — Mannings</h2>
-      <div class="cs-meta">
-        <span class="cs-tag">DFI Retail Group / Mannings</span>
-        <span class="cs-tag">Retail / Health &amp; Beauty</span>
-        <span class="cs-tag">Google Cloud Platform</span>
-        <span class="cs-tag">Hong Kong</span>
-        <span class="cs-tag">Late 2025 – Early 2026</span>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">The Problem</div>
-        <p class="j">DFI Retail Group operates over 11,000 outlets across 13 countries. Mannings had an ambitious AI vision: personalised health recommendations, biometric wellness assessments, omnichannel integration. The infrastructure to support it did not exist. Before any AI model could run, a working GCP cloud foundation needed to be established — servers stood up, vendor relationships confirmed, cross-functional teams aligned, and a clear picture of what the build team needed to start.</p>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">What I Did</div>
-        <p class="j">I was already on a higher-priority group-level recovery program when the HK IT head asked if I could help in parallel. I agreed — an AI foundation program in a health data environment was exactly the kind of engagement I wanted more experience in. My role was coordination: structured meetings across business, IT, data, infrastructure, cloud, and vendor teams — multiple workstreams moving simultaneously under a tight timeframe. Every meeting had a clear agenda. Every session produced documented actions and post-meeting highlights. Every action got chased.</p>
-        <p class="j">The program operated in a PII and PHI-sensitive environment where that shared awareness shaped every coordination decision. After approximately two months, I recognised risk building on the higher-priority recovery program. I made the professional call to re-prioritise — transitioning the Mannings coordination cleanly so the team could continue without losing momentum.</p>
-      </div>
-      <div class="cs-block cs-block--outcome">
-        <div class="cs-block-label">Outcome</div>
-        <p class="j"><strong>GCP servers stood up and ready for the build team to commence.</strong> Vendor relationships established. Cross-functional teams aligned. Integration dependencies mapped. The teams inheriting the program received a complete picture — documented actions and clear handover notes, not an optimistic verbal summary.</p>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">Key Learning</div>
-        <p class="j">The HK IT head brought me in expecting a level of technical engagement that goes beyond typical PM coordination — cloud infrastructure concepts, GCP architecture, the vocabulary that enables a real conversation with a cloud or data team rather than just facilitating one. I could coordinate effectively, but I felt the gap. That experience directly inspired the <strong>Google Cloud ADP certification</strong> I passed in January 2026: not just as a credential, but to build the working technical vocabulary that AI and data projects increasingly require from the people managing them.</p>
-      </div>
+    <div class="cs-block">
+      <div class="cs-block-label">The Problem</div>
+      <p>Carlsberg operates in 150 markets — each with its own ERP configuration, data structures, and supply chain planning workflows. Deploying Kinaxis Maestro AI, which requires clean, consistent, well-integrated data, turned that fragmentation into a critical delivery risk. Malaysia was selected as the APAC pilot: high motivation, real stakes, global visibility, and China already positioned as the next market in the queue.</p>
     </div>
 
-    <div class="cs-divider"></div>
-
-    <!-- CS 03 -->
-    <div class="cs-wrap">
-      <div class="cs-watermark">03</div>
-      <div class="s-label"><span class="s-label-line"></span>Case Study 03 &nbsp;·&nbsp; ERP Modernisation</div>
-      <h2>Global D365 ERP Template<br>— Carlsberg Asia</h2>
-      <div class="cs-meta">
-        <span class="cs-tag">Carlsberg Asia</span>
-        <span class="cs-tag">FMCG / Beverages</span>
-        <span class="cs-tag">Microsoft Dynamics 365</span>
-        <span class="cs-tag">China Pilot → Malaysia &amp; Singapore</span>
-        <span class="cs-tag">Apr 2022 – Sep 2023</span>
-        <span class="cs-tag">Regional PM, Asia — PMO Level</span>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">The Problem</div>
-        <p class="j">Every Carlsberg market had grown its own ERP configuration over time — different implementations, localised workflows, inconsistent data standards. The answer was a global D365 standardisation program: one platform, one template. China was chosen as the Asian pilot — not despite being the most complex market, but because of it. If the template works for China's full complexity, it works for every market that follows. Management made a deliberate strategic choice to start with the hardest problem first.</p>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">What I Did</div>
-        <p class="j">My role was to manage the managers — not tasks. Three local PMs were on the ground in China. My job was regional alignment, keeping global leadership informed, and ensuring Asian market requirements were fully captured before global design decisions accelerated. The core of this was a structured requirements exercise: <strong>1,154 Level 3 requirements collected from China</strong>, then validated across every other Asian market — which were China-specific, which were regionally common, which could be resolved through configuration. That picture went to global for approval, and from it came both the China solution and the foundation of the global template.</p>
-        <p class="j">I also co-led the <strong>RFP process for post-China Asia implementation partners</strong>, with criteria weighted to surface genuine regional delivery experience alongside global capability — because in APAC, those are not the same thing.</p>
-      </div>
-      <div class="cs-block cs-block--outcome">
-        <div class="cs-block-label">Outcome</div>
-        <p class="j">The China pilot delivered a validated <strong>global D365 template</strong> that became the foundation for Malaysia and Singapore. Markets inheriting the template started from a decision record — pre-resolved compliance considerations, a documented requirements framework, and substantially reduced discovery cycles. Malaysia subsequently became the Kinaxis AI pilot. <strong>Clean ERP data is what makes AI supply chain planning reliable</strong> — these two programs are connected, not coincidental.</p>
-      </div>
-      <div class="cs-block">
-        <div class="cs-block-label">Key Learning</div>
-        <p class="j">Start with the hardest market — if the template works for China's full complexity, every simpler market is already solved. ERP platform skills are transferable: D365 and SAP are different systems, but the PM discipline is identical. And governance shows up when scrutiny arrives — when Internal Audit came to review, my job was simple: know where everything is, get them what they need quickly. No scrambling, no gaps, no surprises.</p>
-      </div>
+    <div class="cs-block">
+      <div class="cs-block-label">What I Did · Regional Deployment Lead for Asia</div>
+      <p>I came in focused on the data first — not the technology. Every source system feeding Kinaxis needed validation, gap identification, and remediation sequencing. By go-live, the team was closing known issues, not discovering new ones. The go-live itself ran as a <strong>structured command center operation</strong>: real-time issue triage, defined escalation paths, and cross-functional coordination across global leadership, regional IT, supply chain operations, and the Kinaxis vendor — in English, Cantonese, and Mandarin as the conversation required.</p>
+      <p>In parallel, I coordinated a significant China data sovereignty risk: food-related data classified as sensitive, with AI servers sitting outside China's borders. I worked between Kinaxis and Carlsberg's security team to give Deloitte the technical clarity needed for a legal recommendation. The matter was unresolved when I left — but China subsequently went live on Kinaxis, confirming the path was viable.</p>
     </div>
 
+    <div class="cs-block">
+      <div class="cs-block-label">What Made It Hard</div>
+      <ul class="cs-list">
+        <li>Multiple ERP and planning systems, each requiring individual data validation — managed through a shared tracker replacing informal status with structured milestone accountability.</li>
+        <li>Fixed APAC go-live sequenced within a global rollout. Front-loading risk identification meant when the timeline compressed, we were finishing work, not starting it.</li>
+        <li>Three organizations, multiple time zones, different priorities — Carlsberg global, Malaysian regional ops, and Kinaxis vendor all aligned through a single source of truth for status, decisions, and escalations.</li>
+      </ul>
+    </div>
+
+    <div class="cs-block highlight">
+      <div class="cs-block-label">Outcome</div>
+      <p>Malaysia went live on schedule — a <strong>production-ready AI supply chain planning environment</strong> integrated into Carlsberg's regional operations. The delivery directly accelerated China's positioning as the next global rollout market. China subsequently went live, confirming both the coordination model and the data sovereignty path were replicable.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-label">Key Learning</div>
+      <p>The most important lesson had nothing to do with the technology. It was about the politics of global program governance: when the pilot market team can only answer for the pilot market, questions with global template implications must go back to global. If that boundary isn't held, pilot preferences quietly become global design decisions — and the next market carries the blame for choices that were never theirs to make.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 2 -->
+<section id="cs2">
+  <div class="section-inner">
+    <div class="section-label">Case Study 02 · Cloud AI Infrastructure</div>
+    <h2>GCP AI Health Analytics Foundation</h2>
+
+    <div class="cs-meta">
+      <span class="cs-tag">Retail / Health &amp; Beauty</span>
+      <span class="cs-tag">Google Cloud Platform (GCP)</span>
+      <span class="cs-tag">Hong Kong</span>
+      <span class="cs-tag">Late 2025 – Early 2026</span>
+      <span class="cs-tag">DFI Retail Group / Mannings</span>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-label">The Problem</div>
+      <p>DFI Retail Group operates over 11,000 outlets across 13 countries. Mannings, its health and beauty chain, had an ambitious AI vision: personalized recommendations, biometric wellness assessments, omnichannel integration. The infrastructure to support it didn't exist. Before any AI model could run, a working GCP cloud foundation needed to be established — servers stood up, vendors engaged, cross-functional teams aligned.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-label">What I Did · Parallel Program Coordinator</div>
+      <p>I was already on a higher-priority group-level recovery program when the HK IT head asked if I could help in parallel. I agreed — the work was genuinely interesting: an AI foundation program in a health data environment, exactly the kind of engagement I wanted more experience in.</p>
+      <p>My role was coordination: structured meetings across business, IT, data, infrastructure, cloud, and vendor teams — multiple workstreams moving simultaneously under a tight timeframe. Every meeting had a clear agenda. Every session produced documented actions and post-meeting highlights. Every action got chased. The program operated in a PII and PHI-sensitive environment where that shared awareness shaped every coordination decision.</p>
+      <p>After approximately two months, I recognized risk building on the higher-priority recovery program. I made the professional call to re-prioritize — transitioning the Mannings coordination cleanly so the team could continue without losing momentum.</p>
+    </div>
+
+    <div class="cs-block highlight">
+      <div class="cs-block-label">Outcome</div>
+      <p><strong>GCP servers stood up and ready for the build team to commence.</strong> Vendor relationships established. Cross-functional teams aligned. Integration dependencies mapped. The teams inheriting the program received a complete picture — documented actions and clear handover notes, not an optimistic verbal summary.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-label">Key Learning</div>
+      <p>The HK IT head brought me in expecting technical engagement beyond typical PM coordination — cloud infrastructure concepts, GCP architecture, vocabulary that enables a real conversation rather than just facilitating one. I could coordinate effectively, but I felt the gap. That experience directly inspired the <strong>Google Cloud ADP certification</strong> I passed in January 2026: not just as a credential, but to build the working technical vocabulary that AI and data projects increasingly require from the people managing them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 3 -->
+<section id="cs3">
+  <div class="section-inner">
+    <div class="section-label">Case Study 03 · ERP Modernization</div>
+    <h2>Global D365 ERP Template — Carlsberg Asia</h2>
+
+    <div class="cs-meta">
+      <span class="cs-tag">FMCG / Beverages</span>
+      <span class="cs-tag">Microsoft Dynamics 365</span>
+      <span class="cs-tag">China Pilot → Malaysia &amp; Singapore</span>
+      <span class="cs-tag">Apr 2022 – Sep 2023</span>
+      <span class="cs-tag">Carlsberg Asia</span>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-label">The Problem</div>
+      <p>Every Carlsberg market had grown its own ERP configuration over time — different implementations, localized workflows, inconsistent data standards. The answer was a <strong>global D365 standardization program</strong>: one platform, one template. China was chosen as the Asian pilot — not despite being the most complex market, but because of it. If the template works for China, it works for every market that follows.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-label">What I Did · Regional PM for Asia (PMO Level)</div>
+      <p>My role was to manage the managers — not tasks. Three local PMs were on the ground in China. My job was regional alignment, keeping global leadership informed, and ensuring Asian market requirements were fully captured in the global template before design decisions accelerated.</p>
+      <p>The core of this was a structured requirements exercise: <strong>1,154 Level 3 requirements collected from China</strong>, then validated across every other Asian market in a cross-market survey — which requirements were China-specific, which were regionally common, which could be resolved through configuration. That picture went to global for approval, and from it came both the China solution and the foundation of the global template. I also co-led the <strong>RFP process for post-China Asia implementation partners</strong>, with criteria explicitly weighted to surface genuine regional delivery experience alongside global capability.</p>
+    </div>
+
+    <div class="cs-block highlight">
+      <div class="cs-block-label">Outcome</div>
+      <p>The China pilot delivered a validated <strong>global D365 template</strong> that became the foundation for Malaysia and Singapore. Markets inheriting the template started from a decision record — pre-resolved compliance considerations, documented requirements framework, substantially reduced discovery cycles. Malaysia subsequently became the Kinaxis AI pilot. The D365 standardization and the AI supply chain deployment are connected, not coincidental: <strong>clean ERP data is what makes AI supply chain planning reliable.</strong></p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-label">Key Learning</div>
+      <p>Three convictions from this program: start with the hardest market — if the template works for China's full complexity, every simpler market is already solved. ERP platform skills are transferable — D365 and SAP differ but the PM discipline is identical. And governance shows up when scrutiny arrives — when Internal Audit came to review, my job was simple: know where everything is, get them what they need quickly. No scrambling, no gaps, no surprises.</p>
+    </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section section--alt">
-  <div class="wrap">
-    <div class="s-label"><span class="s-label-line"></span>Background</div>
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">Background</div>
     <h2>About Me</h2>
-    <p class="j">I am a senior enterprise technology leader who has spent 20+ years in APAC making complex programs actually finish. For most of that time, that meant ERP modernisations, cloud migrations, and large-scale system integrations. Increasingly, it means <strong>AI-enabled transformation</strong> — supply chain AI, cloud AI infrastructure, and cloud-enabled enterprise programs — and ensuring the programs that sit behind those initiatives do not fall apart between vendor demo and production go-live.</p>
-    <p class="j">My edge is <strong>recovery</strong>. I have been called into programs that had lost timeline, budget confidence, or executive trust — and I have rebuilt all three. That experience shapes how I approach every engagement: I structure for the moment the pressure arrives, not after it does.</p>
-    <p class="j">Across Carlsberg, DFI Retail Group, Fresenius Medical Care, and earlier engagements spanning supply chain, finance, and retail technology, I have delivered programs across Kinaxis, SAP, D365, Oracle, Azure, and GCP. The platforms change; the fundamentals do not. Data quality, stakeholder alignment, clear accountability, and early risk identification determine outcomes more reliably than any technology choice.</p>
+    <p>I'm a senior enterprise technology leader who has spent 20+ years in APAC making complex programs actually finish. For most of that time, that meant ERP modernizations, cloud migrations, and large-scale system integrations. Increasingly, it means <strong>AI-enabled transformation</strong> — supply chain AI, cloud AI infrastructure, and cloud-enabled enterprise programs — and ensuring the programs that sit behind those initiatives don't fall apart between vendor demo and production go-live.</p>
+    <p>My edge is <strong>recovery</strong>. I've been called into programs that had lost timeline, budget confidence, or executive trust — and I've rebuilt all three. That experience shapes how I approach every engagement: I structure for the moment the pressure arrives, not after it does.</p>
+
     <div class="about-grid">
-      <div>
+      <div class="about-col">
         <h3>Certifications</h3>
-        <ul class="cert-list">
-          <li><span class="cert-badge">CPMAI</span><div>PMI Cognitive Project Management for AI — AI risk management, data quality governance, model lifecycle discipline. <em>Passed Nov 2025.</em></div></li>
-          <li><span class="cert-badge">GCP ADP</span><div>Google Cloud Certified Associate Data Practitioner — cloud data infrastructure and AI analytics platform readiness. <em>Passed Jan 2026.</em></div></li>
-          <li><span class="cert-badge">PMP</span><div>Project Management Professional · PMI-ACP · PSM I · PSPO I — full delivery spectrum from structured program governance to agile product iteration.</div></li>
-          <li><span class="cert-badge">D365</span><div>Microsoft D365 Core Finance &amp; Operations · Salesforce Certified Administrator — platform depth for real implementation conversations.</div></li>
+        <ul class="certs-list">
+          <li>
+            <span class="cert-badge">CPMAI</span>
+            <div>PMI Cognitive Project Management for AI — AI risk management, data quality governance, lifecycle discipline. <em>Nov 2025.</em></div>
+          </li>
+          <li>
+            <span class="cert-badge">GCP ADP</span>
+            <div>Google Cloud Certified Associate Data Practitioner — cloud data infrastructure &amp; AI analytics readiness. <em>Jan 2026.</em></div>
+          </li>
+          <li>
+            <span class="cert-badge">PMP</span>
+            <div>Project Management Professional · PMI-ACP · PSM I · PSPO I — full delivery spectrum.</div>
+          </li>
+          <li>
+            <span class="cert-badge">D365</span>
+            <div>Microsoft D365 Core Finance &amp; Operations · Salesforce Certified Administrator.</div>
+          </li>
         </ul>
       </div>
-      <div>
-        <h3>Core Capabilities</h3>
-        <div class="skill-cloud">
+      <div class="about-col">
+        <h3>What I'm Good At</h3>
+        <div class="skills-grid">
           <span class="skill-tag">AI program orchestration</span>
           <span class="skill-tag">Program recovery</span>
           <span class="skill-tag">AI governance frameworks</span>
-          <span class="skill-tag">Data quality governance</span>
-          <span class="skill-tag">ERP modernisation</span>
+          <span class="skill-tag">ERP modernization</span>
           <span class="skill-tag">Cloud AI infrastructure</span>
+          <span class="skill-tag">Data quality governance</span>
           <span class="skill-tag">Cross-functional alignment</span>
+          <span class="skill-tag">Multilingual delivery</span>
           <span class="skill-tag">Risk identification</span>
           <span class="skill-tag">Stakeholder management</span>
-          <span class="skill-tag">Multilingual delivery</span>
           <span class="skill-tag">SAP · D365 · Oracle</span>
           <span class="skill-tag">GCP · Azure</span>
           <span class="skill-tag">Kinaxis Maestro AI</span>
           <span class="skill-tag">APAC regional rollout</span>
         </div>
-        <p style="margin-top:1.5rem;font-size:0.86rem;" class="j">Seeking senior <strong>AI Program Manager</strong>, AI Governance Lead, or Enterprise Transformation Lead roles in Hong Kong and APAC — pharma, healthcare, finance, retail, and supply chain environments where governance discipline and regional delivery depth make a real difference.</p>
+        <p style="margin-top:1.2rem; font-size:1rem;">Actively seeking senior AI Program Manager, AI Governance Lead, or Enterprise Transformation Lead roles in <strong>Hong Kong and APAC</strong> — pharma, healthcare, finance, retail, supply chain.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TOOLS -->
-<section id="tools" class="section">
-  <div class="wrap">
-    <div class="s-label"><span class="s-label-line"></span>Capabilities</div>
+<!-- TOOLS & METHODS -->
+<section id="tools">
+  <div class="section-inner">
+    <div class="section-label">Capabilities</div>
     <h2>Tools, Methods &amp; AI Approach</h2>
-    <p class="j">My route into AI program management came through the work itself — not a planned pivot. The Kinaxis Maestro deployment was a supply chain program before it was an AI program, at least in how I understood it at the time. Passing <strong>PMI-CPMAI in November 2025</strong> gave me the framework and language for what I had already been doing instinctively: data readiness sequencing, structured governance, lifecycle accountability. The certification did not teach me how to do the work — it gave me the vocabulary to understand what I had already done, and the framework to do it more deliberately going forward.</p>
-    <p class="j">The <strong>Google Cloud ADP in January 2026</strong> came from a different realisation — that AI and data programs increasingly require a PM who can speak the technical language of cloud infrastructure, not just coordinate the people who build it. The Mannings engagement showed me that gap directly. The certification was my response to it.</p>
-    <p class="j">My experience to date is in the <strong>coordination and governance layer</strong> of AI programs — not model design, prompt engineering, or agentic workflow architecture. What I bring is the delivery discipline that makes AI programs actually finish: data readiness coordination, cross-functional alignment, structured governance, and the ability to hold global, regional, and local teams accountable to the same outcome.</p>
+
+    <p>My route into AI program management came through the work itself — not a planned pivot. The Kinaxis Maestro deployment in Malaysia was a supply chain program before it was an AI program. Studying for and passing <strong>PMI-CPMAI in November 2025</strong> gave me the framework and language for what I had already been doing instinctively: data readiness sequencing, structured governance, lifecycle accountability. The <strong>Google Cloud ADP in January 2026</strong> came from the direct realization — via the Mannings engagement — that AI and data programs require a PM who can speak the technical language of cloud infrastructure, not just coordinate the people who build it.</p>
+
     <div class="tools-grid">
       <div class="tool-card">
         <div class="tool-card-label">ERP &amp; Enterprise</div>
         <ul class="tool-list">
-          <li><span>SAP</span><em>Multi-project APAC delivery</em></li>
-          <li><span>Microsoft D365 F&amp;O</span><em>Global template, regional rollout</em></li>
-          <li><span>Oracle</span><em>DB, Forms &amp; Reports</em></li>
+          <li><span>SAP</span> <em>Multi-project APAC</em></li>
+          <li><span>Microsoft D365</span> <em>F&amp;O, global template</em></li>
+          <li><span>Oracle</span> <em>DB, Forms &amp; Reports</em></li>
         </ul>
       </div>
       <div class="tool-card">
-        <div class="tool-card-label">Cloud &amp; AI Infrastructure</div>
+        <div class="tool-card-label">Cloud &amp; AI Infra</div>
         <ul class="tool-list">
-          <li><span>Google Cloud (GCP)</span><em>AI analytics foundation</em></li>
-          <li><span>Microsoft Azure</span><em>Full-stack cloud migration</em></li>
-          <li><span>Azure DevOps</span><em>Requirements &amp; issue tracking</em></li>
+          <li><span>Google Cloud (GCP)</span> <em>AI analytics foundation</em></li>
+          <li><span>Microsoft Azure</span> <em>Full-stack migration</em></li>
+          <li><span>Azure DevOps</span> <em>Requirements &amp; tracking</em></li>
         </ul>
       </div>
       <div class="tool-card">
         <div class="tool-card-label">AI Platforms</div>
         <ul class="tool-list">
-          <li><span>Kinaxis Maestro AI</span><em>Supply chain AI, APAC Lead</em></li>
+          <li><span>Kinaxis Maestro AI</span> <em>Supply chain AI, APAC Lead</em></li>
         </ul>
       </div>
       <div class="tool-card">
         <div class="tool-card-label">Delivery Frameworks</div>
         <ul class="tool-list">
-          <li><span>PMI-CPMAI</span><em>AI governance &amp; lifecycle</em></li>
-          <li><span>PMP · PMI-ACP</span><em>Structured program management</em></li>
-          <li><span>PSM I · PSPO I</span><em>Scrum, agile iterations</em></li>
-          <li><span>Google Cloud ADP</span><em>Cloud data readiness</em></li>
+          <li><span>PMI-CPMAI</span> <em>AI governance, lifecycle</em></li>
+          <li><span>PMP · PMI-ACP</span> <em>Structured program mgmt</em></li>
+          <li><span>PSM I · PSPO I</span> <em>Scrum, agile iterations</em></li>
+          <li><span>Google Cloud ADP</span> <em>Cloud data readiness</em></li>
         </ul>
       </div>
     </div>
+
+    <p style="margin-top:2rem; font-size:1rem; color: var(--mid);">My experience to date is in the <strong>coordination and governance layer</strong> of AI programs — not model design, prompt engineering, or agentic workflow architecture. What I bring is the delivery discipline that makes AI programs actually finish: data readiness coordination, cross-functional alignment, structured governance, and accountability across global, regional, and local tiers.</p>
   </div>
 </section>
 
 <!-- REFLECTIONS -->
-<section id="reflections" class="section section--alt">
-  <div class="wrap">
-    <div class="s-label"><span class="s-label-line"></span>Perspective</div>
+<section id="reflections">
+  <div class="section-inner">
+    <div class="section-label">Perspective</div>
     <h2>Reflections &amp; Key Learnings</h2>
-    <p class="j">I have thought about whether what I have done over the past few years constitutes a "pivot" into AI. I do not think it does. The Carlsberg Kinaxis deployment, the DFI Mannings infrastructure program, the D365 template work — they all required the same underlying discipline as the ERP recoveries and cloud migrations I was doing before them. What has changed is that the technology now makes decisions, not just processes. That changes the stakes around governance. It does not change what governance is.</p>
-    <div class="ref-list">
-      <div class="ref-item">
-        <div class="ref-num">01</div>
+
+    <p>I don't think what I've done constitutes a "pivot" into AI. The Carlsberg Kinaxis deployment, the DFI Mannings infrastructure program, the D365 template work — they all required the same underlying discipline as the ERP recoveries and cloud migrations before them. What's changed is that the technology now makes decisions, not just processes. That changes the stakes around governance. It doesn't change what governance is.</p>
+
+    <div class="reflection-list">
+      <div class="reflection-item">
+        <div class="reflection-num">01</div>
         <div>
           <h3>Governance is the delivery mechanism, not a constraint on it.</h3>
-          <p class="j">Programs that treat data quality, risk identification, and model alignment as parallel workstreams rather than preconditions for delivery discover their structural problems under go-live pressure — when the cost of fixing them is highest. PMI-CPMAI gave me a framework for this, but the truth is simpler: you cannot govern your way out of a live production crisis. You prevent it.</p>
+          <p>Programs that treat data quality, risk identification, and model alignment as parallel workstreams rather than preconditions discover their structural problems under go-live pressure — when the cost of fixing them is highest. You can't govern your way out of a live production crisis. You prevent it.</p>
         </div>
       </div>
-      <div class="ref-item">
-        <div class="ref-num">02</div>
+      <div class="reflection-item">
+        <div class="reflection-num">02</div>
         <div>
           <h3>AI handles the happy path. Humans handle everything else.</h3>
-          <p class="j">Enterprise systems are built for expected flows and standard cases — and AI executes those well. But real operations are full of exceptions, edge cases, and situations nobody anticipated when the system was designed. Those are where AI breaks down and human judgment steps in — not just to fix the immediate problem, but to refine the system, close the gaps, and add what the AI could not anticipate. In enterprise AI programs, humans are not just oversight. They are the ongoing improvement mechanism.</p>
+          <p>Enterprise AI executes standard cases well. But real operations are full of exceptions nobody anticipated when the system was designed. Those are where AI breaks down and human judgment steps in — not just to fix the immediate problem, but to refine the system and close the gaps. In enterprise AI programs, humans aren't just oversight. They're the ongoing improvement mechanism.</p>
         </div>
       </div>
-      <div class="ref-item">
-        <div class="ref-num">03</div>
+      <div class="reflection-item">
+        <div class="reflection-num">03</div>
         <div>
-          <h3>APAC is not a geography. It is a set of operating conditions.</h3>
-          <p class="j">Multilingual environments, regulatory variation across markets, the gap between what HQ wants and what regional teams can absorb — these are not complications. They are the standard. Programs that plan for idealised conditions fail. Programs that plan for APAC conditions deliver.</p>
+          <h3>APAC is not a geography. It's a set of operating conditions.</h3>
+          <p>Multilingual environments, regulatory variation across markets, the gap between what HQ wants and what regional teams can absorb — these aren't complications. They're the standard. Programs that plan for idealized conditions fail. Programs that plan for APAC conditions deliver.</p>
         </div>
       </div>
-      <div class="ref-item">
-        <div class="ref-num">04</div>
+      <div class="reflection-item">
+        <div class="reflection-num">04</div>
         <div>
-          <h3>ERP standardisation is AI readiness — and AI may finally solve ERP's oldest problem.</h3>
-          <p class="j">The organisations asking "when do we start the AI program?" are often already building it when they clean up their ERP data and standardise their process architecture. Clean data is what makes AI useful. But AI also changes the ERP equation more fundamentally: if users can simply tell the system what they need in plain language and get the outcome, companies may no longer need to customise ERP for user convenience. A clean standard template, AI handling the experience layer — less customisation, cleaner data, better AI outputs. A virtuous cycle.</p>
+          <h3>ERP standardization is AI readiness.</h3>
+          <p>The organizations asking "when do we start the AI program?" are often already building it when they clean up their ERP data. Clean data is what makes AI useful. And AI may finally solve ERP's oldest complaint — usability. If users can simply tell the system what they need in plain language, companies may no longer need to customize ERP for user convenience. A clean standard template, AI handling the user experience layer — less customization, cleaner data, better AI outputs. A virtuous cycle.</p>
         </div>
       </div>
-      <div class="ref-item">
-        <div class="ref-num">05</div>
+      <div class="reflection-item">
+        <div class="reflection-num">05</div>
         <div>
           <h3>Recovery experience makes you a better first-pass leader.</h3>
-          <p class="j">Having rebuilt programs under pressure teaches you exactly how they fail. I structure preventively for the failure modes I have seen most often: unclear accountability, late risk identification, governance treated as overhead. The result is that the programs I lead do not need recovering.</p>
+          <p>Having rebuilt programs under pressure teaches you exactly how they fail. I structure preventively for the failure modes I've seen most often: unclear accountability, late risk identification, governance treated as overhead. The result is that the programs I lead don't need recovering.</p>
         </div>
       </div>
     </div>
@@ -441,38 +926,41 @@ footer{background:#050810;color:#283040;padding:1.5rem 3rem;text-align:center;fo
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section section--dark">
-  <div class="wrap">
-    <div class="s-label"><span class="s-label-line"></span>Next Steps</div>
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Next Steps</div>
     <h2>Let's Talk</h2>
-    <p class="j" style="max-width:680px;">If you are building or scaling an AI transformation program in <strong>Hong Kong or across APAC</strong> — whether it is a supply chain AI deployment, an ERP modernisation where AI readiness is part of the brief, a cloud infrastructure foundation, or a program that needs experienced recovery leadership — I would welcome the conversation.</p>
-    <p style="max-width:680px;">Actively exploring senior roles in AI program management, AI governance, and enterprise transformation leadership in pharma, healthcare, finance, and retail.</p>
+    <p>If you're building or scaling an AI transformation program in Hong Kong or across APAC — whether it's a supply chain AI deployment, an ERP modernization where AI readiness is part of the brief, a cloud infrastructure foundation, or a program that needs experienced recovery leadership — I'd welcome the conversation.</p>
+    <p>I'm actively exploring senior roles in AI program management, AI governance, and enterprise transformation leadership in pharma, healthcare, finance, and retail.</p>
+
     <div class="contact-grid">
-      <div>
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-val"><a href="https://www.linkedin.com/in/kevin-yip-a5a96093/" target="_blank" rel="noopener">linkedin.com/in/kevin-yip-a5a96093</a></div>
+      <div class="contact-item">
+        <span class="contact-item-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/kevin-lk-yip/" target="_blank" rel="noopener">linkedin.com/in/kevin-lk-yip</a>
       </div>
-      <div>
-        <div class="contact-label">Email</div>
-        <div class="contact-val"><a href="mailto:kevinyipcl@gmail.com">kevinyipcl@gmail.com</a></div>
+      <div class="contact-item">
+        <span class="contact-item-label">Email</span>
+        <a href="mailto:kevinyipcl@gmail.com">kevinyipcl@gmail.com</a>
       </div>
-      <div>
-        <div class="contact-label">Location</div>
-        <div class="contact-val">Hong Kong — available for introductory calls, portfolio walkthroughs, or a coffee chat</div>
+      <div class="contact-item">
+        <span class="contact-item-label">Location</span>
+        <span>Hong Kong — Available for introductory calls, portfolio walkthroughs, or a coffee chat</span>
       </div>
-      <div>
-        <div class="contact-label">Open to discuss</div>
-        <div class="contact-val">How governance-first AI delivery applies to your specific program context</div>
+      <div class="contact-item">
+        <span class="contact-item-label">Open to discuss</span>
+        <span>Senior AI PM, AI Governance Lead, or Enterprise Transformation roles — HK-based or APAC regional</span>
       </div>
     </div>
-    <div class="contact-sig">
-      <div class="sig-name">Kevin Yip</div>
-      <div class="sig-creds">Senior IT Project Manager · Hong Kong<br>PMI-CPMAI (Nov 2025) · Google Cloud ADP (Jan 2026) · PMP</div>
+
+    <div class="contact-note">
+      Kevin Yip &nbsp;·&nbsp; Senior IT Project Manager &nbsp;·&nbsp; Hong Kong &nbsp;·&nbsp; PMI-CPMAI (Nov 2025) &nbsp;·&nbsp; Google Cloud ADP (Jan 2026) &nbsp;·&nbsp; PMP
     </div>
   </div>
 </section>
 
-<footer>Kevin Yip &nbsp;·&nbsp; AI Program Management &nbsp;·&nbsp; Hong Kong &nbsp;·&nbsp; 2026</footer>
+<footer>
+  Kevin Yip · AI Program Management · Hong Kong · 2026
+</footer>
 
 </body>
 </html>
