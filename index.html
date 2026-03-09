@@ -940,11 +940,11 @@
       </div>
       <div class="contact-item">
         <span class="contact-item-label">Email</span>
-        <script type="text/javascript">
-  var part1 = "kevinyipcl";
-  var part2 = "gmail.com";
-  document.write('<a href="mailto:' + part1 + '@' + part2 + '">' + part1 + '@' + part2 + '</a>');
-</script>
+        <a id="contact-email" href="#"></a>
+        <script>
+          (function(){var u="kevinyipcl",d="gmail.com",el=document.getElementById("contact-email");el.href="mailto:"+u+"@"+d;el.textContent=u+"@"+d;})();
+        </script>
+      </div>
       <div class="contact-item">
         <span class="contact-item-label">Location</span>
         <span>Hong Kong — Available for introductory calls, portfolio walkthroughs, or a coffee chat</span>
